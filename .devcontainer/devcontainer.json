@@ -1,0 +1,32 @@
+{
+  "name": "polyscopex-sdk-devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "appPort": [
+    "4200:4200",
+    "8080:8080"
+  ],
+  "runArgs": ["--add-host=host.docker.internal:host-gateway"],
+  "postStartCommand": {
+    "configure-docker": "sudo chmod -R o+rwx $containerWorkspaceFolder && sudo chmod 666 /var/run/docker.sock;"
+  },
+  "postCreateCommand": "./post_create.sh",
+  "containerEnv": {
+    "SHELL": "/bin/bash",
+    "DEV_CONTAINER": "true",
+    "containerWorkspaceFolder": "${containerWorkspaceFolder}"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "donjayamanne.python-extension-pack", "ms-python.python", "ms-vscode.cpptools",
+				"redhat.java", "vscjava.vscode-java-debug", "vscjava.vscode-maven", "ahern.urscript",
+				"yzhang.markdown-all-in-one","ms-vscode.vscode-typescript-next","ms-azuretools.vscode-docker" 
+      ]
+    }
+  }
+}
