@@ -64,8 +64,8 @@ RUN sudo mkdir /sdk /ursim; \
    sudo chown -R psxdev /sdk /ursim
 
 
-COPY sdk-polyscopex-5.0.28 /sdk
-COPY ursim-polyscopex-0.9.49 /ursim
+COPY sdk-polyscopex-5.1.4 /sdk
+COPY ursim-polyscopex-0.10.19 /ursim
 
 RUN cd /sdk; \
     ./install.sh; \
