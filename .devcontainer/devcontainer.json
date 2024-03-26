@@ -27,6 +27,13 @@
 				"redhat.java", "vscjava.vscode-java-debug", "vscjava.vscode-maven", "ahern.urscript",
 				"yzhang.markdown-all-in-one","ms-vscode.vscode-typescript-next","ms-azuretools.vscode-docker" 
       ]
+    },
+    "codespaces": {
+      "repositories": {
+        "pheobeyeung/PolyScopeX-SDK":{
+
+        }
+      }
     }
   }
 }
